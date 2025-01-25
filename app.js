@@ -24,6 +24,11 @@ function sortearAmigo() {
     let indice = parseInt(Math.random() * amigos.length);
     let amigoSorteado = amigos[indice];
     let resultado = document.getElementById("resultado");
+
+    if(!amigoSorteado) {
+        alert("Insira o nome de um amigo");
+        return;
+    }
     resultado.textContent = "Amigo secreto: " + amigoSorteado;
 
     limparLista();
